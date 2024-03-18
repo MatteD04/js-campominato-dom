@@ -12,15 +12,14 @@
 //generare 16 numeri casuali
 let bombList = [];
 for(let i = 0; i < 16; i++){
+    let bombNumber = Math.floor(Math.random() * 100) + 1;
 
-   let bombNumber = Math.floor(Math.random() * 100) + 1;
-   //se il numero non è presente nell'array lo inserisco
-   if (bombList.includes(bombNumber) === false) {
-    bombList.push (bombNumber);
-   }
+    //se il numero non è presente nell'array lo inserisco
+    if (bombList.includes(bombNumber) === false) {
+     bombList.push (bombNumber);
+    }
 }
 console.log(bombList);
-
 
 const mainGrid = document.querySelector('#grid');
 console.log(mainGrid);
@@ -47,8 +46,13 @@ function generateSquare(number) {
     
     //click su ogni quadrato
     newSquare.addEventListener('click', function() {
-            
-        this.classList.add('clicked');
+        
+        if(bombList[i] === number){
+            this.classList.add('bomb');
+        } else{
+            this.classList.add('clicked');
+        }
+        
         console.log(number);
     });
     return newSquare;
