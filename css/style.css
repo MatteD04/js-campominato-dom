@@ -45,6 +45,14 @@ img{
 .container{
     background-color: #03e165;
 }
+
+.score{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 30px;
+    padding-top: 10px;
+}
 .table{
     display: flex;
     justify-content: center;
@@ -80,5 +88,5 @@ img{
 
 /*FOOTER*/
 footer{
-    padding: 20px;
+    margin-left: 25px;
 }
