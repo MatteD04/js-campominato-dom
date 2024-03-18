@@ -1,0 +1,81 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GENERAL*/
+img{
+    max-width: 60px;
+}
+
+/*HEADER*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 25px;
+}
+
+.head-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title{
+    font-size: 20px;
+    font-family: fantasy;
+    color: #001432;
+}
+
+.btn-play{
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #03e165;
+    border: none;
+    border-radius: 10px;
+    font-family: fantasy;
+    color: #001432;
+}
+
+/*MAIN*/
+.container{
+    background-color: #03e165;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid {
+    margin: 50px;
+    width: 500px;
+    height: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.square.clicked{
+    background-color: rgb(0, 234, 255);
+}
+
+/*FOOTER*/
+footer{
+    padding: 20px;
+}
