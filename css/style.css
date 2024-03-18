@@ -74,6 +74,9 @@ img{
 .square.clicked{
     background-color: rgb(0, 234, 255);
 }
+.square.bomb{
+    background-color: red;
+}
 
 /*FOOTER*/
 footer{
