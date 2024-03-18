@@ -16,7 +16,7 @@ for(let i = 0; i < 16; i++){
 
     //se il numero non è presente nell'array lo inserisco
     if (bombList.includes(bombNumber) === false) {
-     bombList.push (bombNumber);
+     bombList.push(bombNumber);
     }
 }
 console.log(bombList);
@@ -39,6 +39,7 @@ btnPlay.addEventListener('click', function() {
 // Funzione che genera un quadrato
 // number -> rappresenta il numero
 // return: elemento del dom che rappresenta un quadrato
+
 function generateSquare(number) {
     const newSquare = document.createElement('div');
     newSquare.classList.add('square');
@@ -47,8 +48,11 @@ function generateSquare(number) {
     //click su ogni quadrato
     newSquare.addEventListener('click', function() {
         
-        if(bombList[i] === number){
+        if(bombList.includes(parseInt(this.children[0].innerHTML))){
             this.classList.add('bomb');
+            setTimeout(function(){
+                alert('hai perso');
+            },0);
         } else{
             this.classList.add('clicked');
         }
