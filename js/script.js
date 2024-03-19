@@ -37,6 +37,7 @@ btnPlay.addEventListener('click', function() {
 const contatore=document.querySelector(".contatore");
 
 // Funzione per aggiornare il punteggio
+let score = 0
 function updateScore(score) {
     // Incremento lo score
     score++;
@@ -66,7 +67,7 @@ function generateSquare(number) {
             },0);
         } else{
             this.classList.add('clicked');
-            const newScore = updateScore(number - 1);
+            const newScore = updateScore(score++);
         }
         
         console.log(number);
